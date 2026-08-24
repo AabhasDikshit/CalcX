@@ -41,6 +41,7 @@ if(CALCX_BUILD_API)
         GIT_TAG v3.6.1
     )
 
+    set(JSON_BuildTests OFF CACHE INTERNAL "" FORCE)
     FetchContent_MakeAvailable(cpp_httplib nlohmann_json)
 
     add_executable(calcx_api apps/calcx_api.cpp)
