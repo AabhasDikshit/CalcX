@@ -1,0 +1,20 @@
+# CMake build trees
+/build/
+/build-mingw/
+/build-mingw-cmake/
+/cmake-build-*/
+
+# IDE files
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Compiled output
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe

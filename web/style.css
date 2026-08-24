@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root { --ink: #eef2ed; --muted: #8e9a98; --paper: #111820; --panel: #19232b; --line: #2d3b40; --acid: #c9f26d; --coral: #ff806c; --key: #202d34; }
+:root.light { --ink: #172227; --muted: #627276; --paper: #f3f4ed; --panel: #ffffff; --line: #d8dfd8; --acid: #327a35; --coral: #bc4e3b; --key: #e8eee7; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: var(--ink); background: radial-gradient(circle at 15% 0%, #26383a 0, transparent 32%), var(--paper); font-family: 'Space Grotesk', sans-serif; }
+.app-shell { width: min(100%, 720px); margin: auto; padding: 22px 16px 44px; }
+.topbar, .section-heading, .display-footer { display: flex; align-items: center; justify-content: space-between; }
+.eyebrow { margin: 0 0 3px; color: var(--acid); font: 500 10px 'DM Mono', monospace; letter-spacing: 0; text-transform: uppercase; }
+h1 { margin: 0; font-size: 32px; letter-spacing: 0; } h1 span { color: var(--coral); }
+button { border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.icon-button, .text-button { color: var(--acid); background: transparent; text-transform: uppercase; font: 500 11px 'DM Mono', monospace; }
+.icon-button { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; }
+.workspace { margin-top: 30px; }
+.mode-row { display: flex; gap: 5px; overflow-x: auto; scrollbar-width: none; padding-bottom: 12px; }
+.mode { flex: 0 0 auto; padding: 9px 12px; color: var(--muted); border-bottom: 2px solid transparent; background: transparent; font-size: 12px; text-transform: uppercase; }
+.mode.active { color: var(--ink); border-color: var(--coral); }
+.display-panel { padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in srgb, var(--panel) 92%, transparent); box-shadow: 0 18px 50px #00000020; }
+.display-panel label { color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; }
+textarea { display: block; width: 100%; min-height: 82px; resize: vertical; padding: 10px 0; border: 0; outline: 0; color: var(--ink); background: transparent; font: 22px 'DM Mono', monospace; line-height: 1.45; }
+textarea::placeholder { color: var(--muted); opacity: .7; }
+.display-footer { border-top: 1px solid var(--line); padding-top: 10px; color: var(--muted); font: 10px 'DM Mono', monospace; }
+.display-footer span:first-child { color: var(--acid); }
+.quick-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 12px 0 7px; }
+.quick-row button { min-height: 38px; color: var(--acid); background: transparent; font: 12px 'DM Mono', monospace; }
+.keypad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
+.keypad button { min-height: 55px; border: 1px solid var(--line); border-radius: 6px; background: var(--key); font: 18px 'DM Mono', monospace; transition: transform .15s, border-color .15s; }
+.keypad button:active { transform: translateY(2px); } .keypad .operator { color: var(--coral); } .keypad .control { color: var(--muted); font-size: 12px; text-transform: uppercase; } .keypad .equals { color: #152018; background: var(--acid); border-color: var(--acid); font-weight: 700; }
+.result-section, .history-section { margin-top: 34px; } .section-heading { color: var(--muted); font: 12px 'DM Mono', monospace; text-transform: uppercase; }
+.badge { padding: 4px 6px; color: var(--acid); border: 1px solid var(--line); font-size: 9px; }
+.result-box { min-height: 74px; margin-top: 10px; padding: 18px; border-left: 3px solid var(--acid); background: var(--panel); font: 18px 'DM Mono', monospace; overflow-wrap: anywhere; }
+.steps { display: grid; gap: 6px; margin-top: 10px; } .step { padding: 11px 13px; border: 1px solid var(--line); background: #00000012; font-size: 13px; } .step strong { display: block; color: var(--coral); font: 10px 'DM Mono', monospace; text-transform: uppercase; margin-bottom: 4px; }
+.history-list { display: grid; gap: 7px; margin-top: 10px; } .history-item { padding: 12px; border: 1px solid var(--line); background: var(--panel); } .history-item small { color: var(--muted); font: 10px 'DM Mono', monospace; } .history-item p { margin: 5px 0 0; overflow-wrap: anywhere; } .empty { color: var(--muted); font-size: 13px; }
+@media (min-width: 600px) { .app-shell { padding-top: 42px; } .keypad button { min-height: 64px; } }

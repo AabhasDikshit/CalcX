@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111820">
+  <title>CalcX | Mathematical Laboratory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">C++ symbolic mathematics</p>
+        <h1>Calc<span>X</span></h1>
+      </div>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme">sun</button>
+    </header>
+
+    <section class="workspace" aria-label="Calculator workspace">
+      <div class="mode-row" role="tablist" aria-label="Operation mode">
+        <button class="mode active" data-mode="calculate" role="tab">Calculate</button>
+        <button class="mode" data-mode="differentiate" role="tab">Derivative</button>
+        <button class="mode" data-mode="integrate" role="tab">Integral</button>
+        <button class="mode" data-mode="solve" role="tab">Solve</button>
+      </div>
+      <div class="display-panel">
+        <label for="expression">Expression</label>
+        <textarea id="expression" rows="2" spellcheck="false" placeholder="Try sin(x)^2 + cos(x)^2"></textarea>
+        <div class="display-footer"><span id="mode-label">CALCULATE</span><span id="status">Ready</span></div>
+      </div>
+      <div class="quick-row" aria-label="Mathematical functions">
+        <button data-insert="sin(">sin</button><button data-insert="cos(">cos</button><button data-insert="tan(">tan</button><button data-insert="ln(">ln</button><button data-insert="sqrt(">sqrt</button><button data-insert="pi">pi</button>
+      </div>
+      <div class="keypad" aria-label="Expression keypad">
+        <button data-insert="7">7</button><button data-insert="8">8</button><button data-insert="9">9</button><button class="operator" data-insert="/">/</button><button class="operator" data-insert="^">^</button>
+        <button data-insert="4">4</button><button data-insert="5">5</button><button data-insert="6">6</button><button class="operator" data-insert="*">*</button><button class="operator" data-insert="(">(</button>
+        <button data-insert="1">1</button><button data-insert="2">2</button><button data-insert="3">3</button><button class="operator" data-insert="-">-</button><button class="operator" data-insert=")">)</button>
+        <button data-insert="0">0</button><button data-insert=".">.</button><button class="operator" data-insert="+">+</button><button class="control" id="backspace" type="button">del</button><button class="equals" id="solve" type="button">=</button>
+      </div>
+    </section>
+
+    <section class="result-section" aria-live="polite">
+      <div class="section-heading"><span>Result</span><span class="badge" id="result-badge">C++ CORE</span></div>
+      <div class="result-box" id="result">Your result will appear here.</div>
+      <div class="steps" id="steps"></div>
+    </section>
+
+    <section class="history-section">
+      <div class="section-heading"><span>Recent work</span><button class="text-button" id="clear-history" type="button">Clear</button></div>
+      <div id="history" class="history-list"><p class="empty">No calculations yet.</p></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
