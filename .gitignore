@@ -18,3 +18,16 @@
 *.so
 *.dll
 *.exe
+
+# Generated caches/logs
+*.log
+*.tmp
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local env/config
+.env
+.env.*

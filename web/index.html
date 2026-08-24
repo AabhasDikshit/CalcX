@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#111820">
+  <meta name="description" content="CalcX mobile interface backed by the C++17 symbolic math engine.">
   <title>CalcX | Mathematical Laboratory</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,6 +21,13 @@
     </header>
 
     <section class="workspace" aria-label="Calculator workspace">
+      <div class="api-row" aria-label="Backend connection settings">
+        <label for="api-base">API Base URL</label>
+        <div class="api-input-wrap">
+          <input id="api-base" type="url" inputmode="url" placeholder="https://your-backend.example.com">
+          <button class="text-button" id="save-api-base" type="button">Save</button>
+        </div>
+      </div>
       <div class="mode-row" role="tablist" aria-label="Operation mode">
         <button class="mode active" data-mode="calculate" role="tab">Calculate</button>
         <button class="mode" data-mode="differentiate" role="tab">Derivative</button>
@@ -27,6 +37,10 @@
       <div class="display-panel">
         <label for="expression">Expression</label>
         <textarea id="expression" rows="2" spellcheck="false" placeholder="Try sin(x)^2 + cos(x)^2"></textarea>
+        <div class="variable-row">
+          <label for="variable">Variable</label>
+          <input id="variable" type="text" maxlength="12" value="x" placeholder="x">
+        </div>
         <div class="display-footer"><span id="mode-label">CALCULATE</span><span id="status">Ready</span></div>
       </div>
       <div class="quick-row" aria-label="Mathematical functions">

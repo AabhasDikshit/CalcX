@@ -12,6 +12,10 @@ button { border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-
 .icon-button, .text-button { color: var(--acid); background: transparent; text-transform: uppercase; font: 500 11px 'DM Mono', monospace; }
 .icon-button { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; }
 .workspace { margin-top: 30px; }
+.api-row { margin-bottom: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in srgb, var(--panel) 90%, transparent); }
+.api-row label { display: block; color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; }
+.api-input-wrap { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 8px; }
+.api-input-wrap input { width: 100%; min-height: 38px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); background: var(--key); font: 12px 'DM Mono', monospace; }
 .mode-row { display: flex; gap: 5px; overflow-x: auto; scrollbar-width: none; padding-bottom: 12px; }
 .mode { flex: 0 0 auto; padding: 9px 12px; color: var(--muted); border-bottom: 2px solid transparent; background: transparent; font-size: 12px; text-transform: uppercase; }
 .mode.active { color: var(--ink); border-color: var(--coral); }
@@ -19,6 +23,8 @@ button { border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-
 .display-panel label { color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; }
 textarea { display: block; width: 100%; min-height: 82px; resize: vertical; padding: 10px 0; border: 0; outline: 0; color: var(--ink); background: transparent; font: 22px 'DM Mono', monospace; line-height: 1.45; }
 textarea::placeholder { color: var(--muted); opacity: .7; }
+.variable-row { display: grid; grid-template-columns: auto minmax(68px, 92px); align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+.variable-row input { min-height: 32px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); background: var(--key); font: 12px 'DM Mono', monospace; text-align: center; }
 .display-footer { border-top: 1px solid var(--line); padding-top: 10px; color: var(--muted); font: 10px 'DM Mono', monospace; }
 .display-footer span:first-child { color: var(--acid); }
 .quick-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 12px 0 7px; }
